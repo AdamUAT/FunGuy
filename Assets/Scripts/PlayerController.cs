@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
     private PlayerPawn playerPawn;
     [SerializeField]
     private KeyCode up;
