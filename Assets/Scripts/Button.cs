@@ -12,14 +12,16 @@ public class Button : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D other)
   {
-    Debug.Log("lkajlkjl");
     if (other.gameObject.CompareTag("Player"))
     {
       if (door.activeSelf)
       {
-        soundPlayer.gameObject.transform.position = door.transform.position;
-        soundPlayer.Play();
-        door.SetActive(false);
+                if (soundPlayer != null)
+                {
+                    soundPlayer.gameObject.transform.position = door.transform.position;
+                    soundPlayer.Play();
+                }
+                door.SetActive(false);
       }
     }
   }
