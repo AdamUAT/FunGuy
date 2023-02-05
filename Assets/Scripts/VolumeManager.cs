@@ -7,19 +7,21 @@ using UnityEngine.Audio;
 // Class manages the audio mixer for the game
 public class VolumeManager : MonoBehaviour
 {
+    #region Singleton
     public static VolumeManager Instance { get; private set; }
-    private void Awake() 
-    { 
-        // If there is an instance, and it's not me, delete myself.
-        if (Instance != null && Instance != this) 
-        { 
-            Destroy(this); 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
         }
-        else 
-        { 
-            Instance = this; 
-        } 
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
+    #endregion Singleton
 
     public AudioMixer mixer;
 
@@ -38,11 +40,6 @@ public class VolumeManager : MonoBehaviour
         
         sfx_volume = PlayerPrefs.GetFloat("SfxVolume", 1.0f);
         mixer.SetFloat("SfxVolume", Mathf.Log10(sfx_volume) * 20);
-
-        
-        Debug.Log("MasterVolume: " + master_volume);
-        Debug.Log("MusicVolume: " + music_volume);
-        Debug.Log("SfxVolume: " + sfx_volume);
     }
 
     public void SetMasterLevel(float sliderValue)
