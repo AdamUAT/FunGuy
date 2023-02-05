@@ -10,6 +10,8 @@ public class PlayerSpawn : MonoBehaviour
     private UnityEngine.Tilemaps.Tilemap grid;
     [SerializeField]
     private DialogueDisplay dialogueDisplay;
+    [SerializeField]
+    private List<bacteria_tracking> bacteria;
 
     // Start is called before the first frame update
     void Awake()
@@ -17,5 +19,10 @@ public class PlayerSpawn : MonoBehaviour
         GameObject playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation); //Spawns the player at the location of the PlayerSpawn gameobject
         playerInstance.GetComponent<PlayerPawn>().grid = this.grid; //The grid is stored in the PlayerSpawn, since the grid will be a different instance for each level.
         dialogueDisplay.SetPlayer(playerInstance); //Tells the UI what the player is instead of it searching for it at runtime.
+
+        foreach(bacteria_tracking bacter in bacteria)
+        {
+            bacter.Player = playerInstance;
+        }
     }
 }
