@@ -16,6 +16,9 @@ public class DialogueDisplay : MonoBehaviour
   [SerializeField]
   private TextMeshProUGUI dialogueText;
 
+  [SerializeField]
+  private SoundPlayer soundPlayer;
+
   private GameObject player;
 
   //The two sets of timers tells update which one's active.
@@ -118,6 +121,7 @@ public class DialogueDisplay : MonoBehaviour
   {
     ActivatePlayerDialogue();
     dialogueText.text = content;
+    soundPlayer.Play();
   }
 
   //Reveals the player speech bubble, scales it, moves it to the player, and then positions it so it's not out of bounds.
