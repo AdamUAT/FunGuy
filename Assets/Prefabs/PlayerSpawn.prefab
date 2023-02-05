@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: -3.5, z: -0.7265625}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bf673bf491a1e4283f37baa2e18646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4107774909167323854, guid: cb51473fe84657e4d83c5f0484ac7adb,
+  playerPrefab: {fileID: 5626978628578479539, guid: cb51473fe84657e4d83c5f0484ac7adb,
     type: 3}
   grid: {fileID: 0}
