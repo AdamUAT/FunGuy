@@ -8,11 +8,14 @@ public class PlayerSpawn : MonoBehaviour
     private GameObject playerPrefab;
     [SerializeField]
     private UnityEngine.Tilemaps.Tilemap grid;
+    [SerializeField]
+    private DialogueDisplay dialogueDisplay;
 
     // Start is called before the first frame update
     void Awake()
     {
         GameObject playerInstance = Instantiate(playerPrefab, transform.position, transform.rotation); //Spawns the player at the location of the PlayerSpawn gameobject
         playerInstance.GetComponent<PlayerPawn>().grid = this.grid; //The grid is stored in the PlayerSpawn, since the grid will be a different instance for each level.
+        dialogueDisplay.SetPlayer(playerInstance); //Tells the UI what the player is instead of it searching for it at runtime.
     }
 }
