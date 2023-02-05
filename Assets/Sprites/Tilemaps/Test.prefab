@@ -432,6 +432,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 19d652890aab3894fae9860b9c733f19, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 0}
+
     m_Data:
       e00: 1
       e01: 0
