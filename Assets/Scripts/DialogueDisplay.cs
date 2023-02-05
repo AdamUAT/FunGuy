@@ -21,6 +21,7 @@ public class DialogueDisplay : MonoBehaviour
     public void DisplayPlayerDialogue(string content)
     {
         ActivatePlayerDialogue();
+
     }
 
     //The function to call to display any naration dialogue
@@ -107,12 +108,5 @@ public class DialogueDisplay : MonoBehaviour
             UpdateParagraphDialogue();
         else if (playerDialogue.activeSelf)
             DeactivateParagraphDialogue();
-    }
-
-    private void Start()
-    {
-        ActivatePlayerDialogue();
-
-
     }
 }

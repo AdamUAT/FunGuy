@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9112906589946967666}
   - component: {fileID: 7066266920084617626}
-  - component: {fileID: 8785176191564838682}
-  - component: {fileID: 5323106833834034915}
+  - component: {fileID: 7005418356049248862}
   m_Layer: 0
   m_Name: whitebloodcell
   m_TagString: Untagged
@@ -28,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2960486775523640375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.550915, y: -0.3537982, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: abf73f8c7e54f8942a4b750a52badc2b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b107866029e9be4b927ab61875f2e39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8785176191564838682
+--- !u!114 &7005418356049248862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,30 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2960486775523640375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11af97dfaed1b4844b9926f9f16062a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d4fa6da29e3a564f98e4538c0dbe916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mRaycastingDistance: 1
-  mMovementSpeed: 3
-  bIsGoingHorizontal: 1
---- !u!50 &5323106833834034915
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2960486775523640375}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  grid: {fileID: 0}
+  path: {fileID: 0}
+  pathTile: {fileID: 11400000, guid: c31dd3b5e9a3d4d4ba46885e7b46c330, type: 2}
+  movementSpeed: 1
