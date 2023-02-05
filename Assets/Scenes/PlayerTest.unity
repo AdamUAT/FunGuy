@@ -98,11 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_LightingSettings: {fileID: 1061428826}
-=======
-  m_LightingSettings: {fileID: 776940588}
->>>>>>> Stashed changes
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1693,11 +1689,7 @@ Tilemap:
   - m_RefCount: 135
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
-<<<<<<< Updated upstream
     m_Data: {r: 3.5826e-41, g: 3.5826e-41, b: 3.5826e-41, a: 3.5826e-41}
-=======
-    m_Data: {r: 1.8043e-41, g: 1.8043e-41, b: 1.8043e-41, a: 1.8043e-41}
->>>>>>> Stashed changes
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1767,11 +1759,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!850595691 &1061428826
-=======
---- !u!850595691 &776940588
->>>>>>> Stashed changes
 LightingSettings:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
