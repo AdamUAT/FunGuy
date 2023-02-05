@@ -98,7 +98,11 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_LightingSettings: {fileID: 1061428826}
+=======
+  m_LightingSettings: {fileID: 776940588}
+>>>>>>> Stashed changes
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1689,7 +1693,11 @@ Tilemap:
   - m_RefCount: 135
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
+<<<<<<< Updated upstream
     m_Data: {r: 3.5826e-41, g: 3.5826e-41, b: 3.5826e-41, a: 3.5826e-41}
+=======
+    m_Data: {r: 1.8043e-41, g: 1.8043e-41, b: 1.8043e-41, a: 1.8043e-41}
+>>>>>>> Stashed changes
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1759,7 +1767,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!850595691 &1061428826
+=======
+--- !u!850595691 &776940588
+>>>>>>> Stashed changes
 LightingSettings:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1831,7 +1843,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1650387238}
   - component: {fileID: 1650387237}
-  - component: {fileID: 1650387236}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1839,14 +1850,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1650387236
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650387235}
-  m_Enabled: 1
 --- !u!20 &1650387237
 Camera:
   m_ObjectHideFlags: 0
@@ -1931,6 +1934,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609554660143792453, guid: 6c835478f675a6641be401d979954c98,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4609554660143792453, guid: 6c835478f675a6641be401d979954c98,
         type: 3}
