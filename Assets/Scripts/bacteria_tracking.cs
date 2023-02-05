@@ -21,8 +21,6 @@ public class bacteria_tracking : MonoBehaviour
     {
         distance = Vector2.Distance(transform.position, Player.transform.position);
         Vector2 direction = Player.transform.position - transform.position;
-        Debug.Log(Player);
         transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
-
     }
 }
