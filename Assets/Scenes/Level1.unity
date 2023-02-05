@@ -4808,6 +4808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1250480983}
+  soundPlayer: {fileID: 0}
 --- !u!114 &218830696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4821,6 +4822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 817205542}
+  soundPlayer: {fileID: 0}
 --- !u!1001 &251642235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7350,7 +7352,7 @@ PrefabInstance:
     - target: {fileID: 7365244929232791486, guid: 6c835478f675a6641be401d979954c98,
         type: 3}
       propertyPath: bacteria.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7365244929232791486, guid: 6c835478f675a6641be401d979954c98,
         type: 3}
