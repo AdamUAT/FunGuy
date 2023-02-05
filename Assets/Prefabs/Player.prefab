@@ -15,8 +15,7 @@ GameObject:
   - component: {fileID: 5626978628578479537}
   - component: {fileID: -1121995531546718339}
   - component: {fileID: -4206987997988128893}
-  - component: {fileID: 689153710550219965}
-  - component: {fileID: 5895712965108923171}
+  - component: {fileID: 5564531541889305451}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -97,12 +96,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 223dabb12198ecb4292efd7a37afc84e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb9701e476926dd41996045e9a497d2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.48, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -118,10 +117,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56fd87f545edecc43a7211f0c0ec5aa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   grid: {fileID: 0}
-  movementSpeed: 1
+  movementSpeed: 3
   rootTiles: {fileID: 11400000, guid: 327eef94702414a4ca8ac2d54f11922a, type: 2}
   onPlayerStartMoving:
     m_PersistentCalls:
@@ -135,7 +134,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &5626978628578479537
@@ -148,8 +147,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 306f4c2a7864e214786ba631202e1d99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   playerPawn: {fileID: 5626978628578479536}
   up: 119
   down: 115
@@ -186,25 +185,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c06c7ee719c01fc4bbf80efaa44c07f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &689153710550219965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5626978628578479539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524fb88cc2cb431d0813d9e577fc7e7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomChatRange: {x: 10, y: 20}
-  onCasualChatTrigger:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!81 &5895712965108923171
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!81 &5564531541889305451
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,5 +280,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8e0fa17220927ae082281dba1dc5e71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
