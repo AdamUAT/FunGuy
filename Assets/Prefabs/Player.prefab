@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: {fileID: 0}
-  movementSpeed: 1
+  movementSpeed: 2
   rootTiles: {fileID: 11400000, guid: 327eef94702414a4ca8ac2d54f11922a, type: 2}
   onPlayerStartMoving:
     m_PersistentCalls:
