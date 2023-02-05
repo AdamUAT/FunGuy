@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5626978628578479537}
   - component: {fileID: -1121995531546718339}
   - component: {fileID: -4206987997988128893}
+  - component: {fileID: 689153710550219965}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -170,3 +171,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06c7ee719c01fc4bbf80efaa44c07f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &689153710550219965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626978628578479539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524fb88cc2cb431d0813d9e577fc7e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomChatRange: {x: 10, y: 20}
+  onCasualChatTrigger:
+    m_PersistentCalls:
+      m_Calls: []
