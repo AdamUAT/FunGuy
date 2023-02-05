@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DoorBrush
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_Tile: {fileID: 11400000, guid: 6342912440860fd42aa23ddfb0542493, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 3aed56c86aa2841498636fc2b478362e, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
