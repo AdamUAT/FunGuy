@@ -40,11 +40,6 @@ public class VolumeManager : MonoBehaviour
         
         sfx_volume = PlayerPrefs.GetFloat("SfxVolume", 1.0f);
         mixer.SetFloat("SfxVolume", Mathf.Log10(sfx_volume) * 20);
-
-        
-        Debug.Log("MasterVolume: " + master_volume);
-        Debug.Log("MusicVolume: " + music_volume);
-        Debug.Log("SfxVolume: " + sfx_volume);
     }
 
     public void SetMasterLevel(float sliderValue)
