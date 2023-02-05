@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class EndManager : MonoBehaviour
 {
-    void Update()
+  void Start()
+  {
+    MusicManager.Instance.Stop();
+  }
+
+  void Update()
+  {
+    if (Input.GetKey(KeyCode.Q))
     {
-       if (Input.GetKey(KeyCode.Q))
-        {
-            SceneManager.LoadScene("MainMenu");
-        } 
+      SceneManager.LoadScene("MainMenu");
     }
+  }
 }

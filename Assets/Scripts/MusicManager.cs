@@ -5,99 +5,115 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
 
-    #region Singleton
-    public static MusicManager Instance { get; private set; }
-    private void Awake()
+#region Singleton
+  public static MusicManager Instance { get; private set; }
+  private void Awake()
+  {
+    if (Instance == null)
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+      Instance = this;
+      DontDestroyOnLoad(this);
     }
-    #endregion Singleton
-
-    [SerializeField]
-    AudioSource track1;
-
-    [SerializeField]
-    AudioSource track2;
-
-    bool transition = false;
-    AudioSource currentTrack;
-    AudioSource previousTrack;
-    float transitionStart;
-    float transitionTime;
-
-    [SerializeField]
-    List<AudioClip> songs;
-
-
-    // Start is called before the first frame update
-    void Start()
+    else
     {
-        currentTrack = track1;
-        previousTrack = track2;
+      Destroy(this.gameObject);
     }
+  }
+#endregion Singleton
 
-    // Update is called once per frame
-    void Update()
+  [SerializeField]
+  AudioSource track1;
+
+  [SerializeField]
+  AudioSource track2;
+
+  bool transition = false;
+  AudioSource currentTrack;
+  AudioSource previousTrack;
+  float transitionStart;
+  float transitionTime;
+
+  [SerializeField]
+  List<AudioClip> songs;
+
+
+  // Start is called before the first frame update
+  void Start()
+  {
+    SetTracks();
+  }
+
+  void SetTracks()
+  {
+    if (currentTrack == null)
     {
-       if(transition)
-       {
-            float time_passed = Time.time - transitionStart;
-
-            if(time_passed > transitionTime)
-            {
-                // Finish Transition
-                currentTrack.volume = 1.0f;
-                previousTrack.volume = 0.0f;
-                previousTrack.Stop();
-
-                transition = false;
-            } else {
-
-                // Transition Volumes
-                float transitionPercent = time_passed / transitionTime;
-
-                currentTrack.volume = Mathf.Lerp(0.0f, 1.0f, transitionPercent);
-                previousTrack.volume = Mathf.Lerp(1.0f, 0.0f, transitionPercent);
-            }
-       } 
+      currentTrack = track1;
+      previousTrack = track2;
     }
+  }
 
-    public void Play()
+  // Update is called once per frame
+  void Update()
+  {
+    if(transition)
     {
-        currentTrack.Play();
+      float time_passed = Time.time - transitionStart;
+
+      if(time_passed > transitionTime)
+      {
+        // Finish Transition
+        currentTrack.volume = 1.0f;
+        previousTrack.volume = 0.0f;
+        previousTrack.Stop();
+
+        transition = false;
+      } else {
+
+        // Transition Volumes
+        float transitionPercent = time_passed / transitionTime;
+
+        currentTrack.volume = Mathf.Lerp(0.0f, 1.0f, transitionPercent);
+        previousTrack.volume = Mathf.Lerp(1.0f, 0.0f, transitionPercent);
+      }
     }
+  }
 
-    public void Pause()
-    {
-        currentTrack.Pause();
-        previousTrack.Pause();
-    }
+  public void Play()
+  {
+    currentTrack.Play();
+  }
 
-    public void TransitionToSong(int songIndex, float transitionTime = 5.0f)
-    {
-        transitionStart = Time.time;
-        this.transitionTime = transitionTime;
+  public void Pause()
+  {
+    currentTrack.Pause();
+    previousTrack.Pause();
+  }
 
-        // Swap tracks
-        AudioSource tempTrack = previousTrack;
-        previousTrack = currentTrack;
-        currentTrack = tempTrack; 
+  public void Stop()
+  {
+    currentTrack.Stop();
+    previousTrack.Stop();
+  }
 
-        // Get Song
-        AudioClip song = songs[songIndex];
+  public void TransitionToSong(int songIndex, float transitionTime = 5.0f)
+  {
+    SetTracks();
 
-        // Play song on current track starting quiet
-        currentTrack.clip = song;
-        currentTrack.volume = 0.0f;
-        currentTrack.Play();
-        transition = true;
-    }
+    transitionStart = Time.time;
+    this.transitionTime = transitionTime;
+
+    // Swap tracks
+    AudioSource tempTrack = previousTrack;
+    previousTrack = currentTrack;
+    currentTrack = tempTrack;
+
+    // Get Song
+    AudioClip song = songs[songIndex];
+
+    // Play song on current track starting quiet
+    currentTrack.clip = song;
+    currentTrack.volume = 0.0f;
+    currentTrack.Play();
+    transition = true;
+  }
 }

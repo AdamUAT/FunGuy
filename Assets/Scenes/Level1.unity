@@ -7350,7 +7350,7 @@ PrefabInstance:
     - target: {fileID: 7365244929232791486, guid: 6c835478f675a6641be401d979954c98,
         type: 3}
       propertyPath: bacteria.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7365244929232791486, guid: 6c835478f675a6641be401d979954c98,
         type: 3}

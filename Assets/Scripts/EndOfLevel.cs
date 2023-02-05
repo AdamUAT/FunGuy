@@ -5,14 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class EndOfLevel : MonoBehaviour
 {
-    [SerializeField]
-    private string nextScene;
+  [SerializeField]
+  private string nextScene;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+  [SerializeField]
+  private bool playSong = true;
+
+  [SerializeField]
+  private int songToPlay = 2;
+
+  private void OnTriggerEnter2D(Collider2D collision)
+  {
+    if(collision.gameObject.CompareTag("Player"))
     {
-        if(collision.gameObject.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(nextScene);
-        }
+      SceneManager.LoadScene(nextScene);
+      if(playSong)
+      {
+        MusicManager.Instance?.TransitionToSong(songToPlay);
+      }
     }
+  }
 }
