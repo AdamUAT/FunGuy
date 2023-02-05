@@ -34,7 +34,8 @@ Transform:
   m_LocalPosition: {x: -0.542166, y: 9.937531, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1443360032191529892}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121,6 +122,21 @@ MonoBehaviour:
   grid: {fileID: 0}
   movementSpeed: 1
   rootTiles: {fileID: 11400000, guid: 327eef94702414a4ca8ac2d54f11922a, type: 2}
+  onPlayerStartMoving:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7598058934095458045}
+        m_TargetAssemblyTypeName: SoundPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5626978628578479537
 MonoBehaviour:
   m_ObjectHideFlags: 0
