@@ -85,7 +85,12 @@ public class PlayerPawn : MonoBehaviour
     {
         //Converts the current position of the player to the would-be position of the player in the grid's coordinates.
         Vector3Int gridPosition = grid.WorldToCell(position + (direction.normalized * grid.cellSize));
-        Collider2D tempCollider = Physics2D.OverlapCircle(position + (direction.normalized * grid.cellSize), 0.1f); //saves the collider so we only have to call overlap cicle once.
-        return (grid.GetColliderType(gridPosition) == Tile.ColliderType.None && !isMoving && (tempCollider == null || tempCollider.isTrigger)); //If the cell in the grid that the player won't be moving to has no collider and the player isn't already moving, then return true.
+        Collider2D[] tempColliders = Physics2D.OverlapCircleAll(position + (direction.normalized * grid.cellSize), 0.1f); //saves the collider so we only have to call overlap cicle once.
+        foreach(Collider2D collider in tempColliders)
+        {
+            if (!collider.isTrigger)
+                return false;
+        }
+        return (grid.GetColliderType(gridPosition) == Tile.ColliderType.None && !isMoving); //If the cell in the grid that the player won't be moving to has no collider and the player isn't already moving, then return true.
     }
 }

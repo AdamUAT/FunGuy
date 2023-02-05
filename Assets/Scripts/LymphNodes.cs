@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public enum PickableType { SCORE, ITEM }
 public class LymphNodes : MonoBehaviour
 
@@ -20,6 +21,7 @@ public class LymphNodes : MonoBehaviour
             if (type.Equals(PickableType.SCORE))
             {
                 GameManager.instance.addScorePoints(points);
+               
             }
             Destroy(gameObject);
         }
@@ -28,5 +30,6 @@ public class LymphNodes : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
             isCollected = true;
+        
     }
 }
